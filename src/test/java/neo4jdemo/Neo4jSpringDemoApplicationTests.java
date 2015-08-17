@@ -10,6 +10,7 @@ import org.neo4j.graphdb.Node;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.data.neo4j.core.GraphDatabase;
+import org.springframework.data.neo4j.support.Neo4jTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -21,6 +22,9 @@ public class Neo4jSpringDemoApplicationTests {
 
 	@Autowired
 	GraphDatabaseService graphDatabaseService;
+
+	@Autowired
+	Neo4jTemplate neo4jTemplate;
 
 	@Test
 	public void contextLoads() {
